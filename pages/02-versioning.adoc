@@ -1,7 +1,7 @@
-= Versioning
+= Version Control in Git
 :toc: left
 
-Git is a version control system. It gives you a record of the history of your files and the changes you make to them. You can store just about any type of file in git, but we'll see that it is particulary good at working with files that are written in plain text.
+Git is a version control system. It gives you a record of the history of your files and the changes you make to them. You can store just about any type of file in Git, but we'll see that it is particulary good at working with files that are written in plain text.
 
 == Create an empty repository for your work
 
@@ -27,7 +27,7 @@ You can double-check that you are in the right place with the working directory 
 pwd
 ```
 
-This should display your current location in the file tree. Once you are where you want to be, let's turn this folder into a git repostitory:
+This should display your current location in the file tree. Once you are where you want to be, let's turn this folder into a Git repostitory:
 
 ```
 git init
@@ -61,7 +61,7 @@ Git starts you with a default branch called `main`. A branch is an alternate ver
 
 On the second line, because we have no commits yet we have no history to see.
 
-The last line is git trying to be helpful and tell you how to get started. Let's start making changes.
+The last line is Git trying to be helpful and tell you how to get started. Let's start making changes.
 
 [NOTE]
 ====
@@ -119,7 +119,7 @@ Make sure you have the `test-branch` checked out and we can add files to our rep
 
 == Add files to your repository
 
-Now, you can go ahead and fill your new directory up with whatever files you want. For my example, I'll keep it simple and add only one or two files at a time to show you the git workflow.
+Now, you can go ahead and fill your new directory up with whatever files you want. For my example, I'll keep it simple and add only one or two files at a time to show you the Git workflow.
 
 If you have some files you want to work with, great, or let's start with some more command line practice and learn about the `echo` command. 
 
@@ -136,7 +136,7 @@ echo "sample text" >> .\sample_file01.txt
 
 Now we've added the `>>` which redirects our output into the new file `sample_file01.txt`, which we can open in our favorite text editor. We should end up with the words "sample text" in a simple text file. That's good enough for now.
 
-We now have an **untracked file** in our repository. That just means we haven't told git to keep track of it yet. Let's ask git about it. 
+We now have an **untracked file** in our repository. That just means we haven't told Git to keep track of it yet. Let's ask Git about it.
 
 ```
 On branch main
@@ -150,7 +150,7 @@ Untracked files:
 
 === Add a file to Staging
 
-Git shows us the names of any untracked files in our repository, and it shows us how to add the file to git: with the `git add` command. Let's try it out.
+Git shows us the names of any untracked files in our repository, and it shows us how to add the file to Git: with the `git add` command. Let's try it out.
 
 ```
 git add sample-file.txt
@@ -254,7 +254,7 @@ Feel free to practice adding and editing more files before you commit. Just as b
 
 [WARNING]
 ====
-This is one of the rare times you can lose work while working in git. Git uses the `git checkout {FILENAME}` as an undo of unstaged changes, so be careful stage any changes you want to keep before using this command.
+This is one of the rare times you can lose work while working in Git. Git uses the `git checkout {FILENAME}` as an undo of unstaged changes, so be careful stage any changes you want to keep before using this command.
 ====
 
 The following is a decent workflow to follow when you are ready to commit changes. Run these commands one at a time:
@@ -280,7 +280,7 @@ If you do delete something you need to get back, you can run `git log` to find a
 git checkout {commit hash}
 ```
 
-You are no longer working on a branch, so git gives you a lot of information here:
+You are no longer working on a branch, so Git gives you a lot of information here:
 
 ```
 Note: switching to '4a214e6ebafa2f30d25a4466bb6fab2a5d7857a0'.
@@ -302,13 +302,13 @@ Turn off this advice by setting config variable advice.detachedHead to false
 
 HEAD is now at 4a214e6eba Added sample-file.txt to demonstrate committing changes
 ```
-HEAD is an important concept referring to the most current commit you have checked out. Normally, HEAD is the most recent commit in your branch, but we are currently time-traveling to the past, so git calls this a 'detached HEAD'. The rest of the statement is telling us we could create a new branch from here and ignore everything after. You might want to do that some day, but we just want to find our deleted file and get back to safety.
+HEAD is an important concept referring to the most current commit you have checked out. Normally, HEAD is the most recent commit in your branch, but we are currently time-traveling to the past, so Git calls this a 'detached HEAD'. The rest of the statement is telling us we could create a new branch from here and ignore everything after. You might want to do that some day, but we just want to find our deleted file and get back to safety.
 
-Find the file you want to restore and copy it somewhere safe, such as your Desktop or other folder outside of the git repository. We'll return to our branch and copy it where we want it and then commit again. 
+Find the file you want to restore and copy it somewhere safe, such as your Desktop or other folder outside of the Git repository. We'll return to our branch and copy it where we want it and then commit again.
 
 == Files and folders
 
-One thing to be aware of about working in git is that it only tracks files and doesn't really understand folders. It keeps your folder structure, so feel free to organize your repository in a way that makes sense to you, but know that you can't commit an empty folder. 
+One thing to be aware of about working in Git is that it only tracks files and doesn't really understand folders. It keeps your folder structure, so feel free to organize your repository in a way that makes sense to you, but know that you can't commit an empty folder.
 
 For example, if you have your files arranged like this example:
 
@@ -341,7 +341,7 @@ Changes to be committed:
 
 == Next Steps
 
-Now you have enough commands to use git on your own to track your own work and feel safe that you can experiment without overwriting your previous work. The real benefits of git come from sharing changes with others, so we'll look at using git collaboratively. 
+Now you have enough commands to use Git on your own to track your own work and feel safe that you can experiment without overwriting your previous work. The real benefits of Git come from sharing changes with others, so we'll look at using Git collaboratively.
 
 == Commands introduced
 
