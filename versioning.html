@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.16">
-<title>Versioning</title>
+<title>Version Control in Git</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -439,7 +439,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Versioning</h1>
+<h1>Version Control in Git</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
@@ -473,7 +473,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Git is a version control system. It gives you a record of the history of your files and the changes you make to them. You can store just about any type of file in git, but we&#8217;ll see that it is particulary good at working with files that are written in plain text.</p>
+<p>Git is a version control system. It gives you a record of the history of your files and the changes you make to them. You can store just about any type of file in Git, but we&#8217;ll see that it is particulary good at working with files that are written in plain text.</p>
 </div>
 </div>
 </div>
@@ -510,7 +510,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="paragraph">
-<p>This should display your current location in the file tree. Once you are where you want to be, let&#8217;s turn this folder into a git repostitory:</p>
+<p>This should display your current location in the file tree. Once you are where you want to be, let&#8217;s turn this folder into a Git repostitory:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -554,7 +554,7 @@ nothing to commit (create/copy files and use "git add" to track)</code></pre>
 <p>On the second line, because we have no commits yet we have no history to see.</p>
 </div>
 <div class="paragraph">
-<p>The last line is git trying to be helpful and tell you how to get started. Let&#8217;s start making changes.</p>
+<p>The last line is Git trying to be helpful and tell you how to get started. Let&#8217;s start making changes.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -646,7 +646,7 @@ nothing to commit (create/copy files and use "git add" to track)</code></pre>
 <h2 id="_add_files_to_your_repository">Add files to your repository</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Now, you can go ahead and fill your new directory up with whatever files you want. For my example, I&#8217;ll keep it simple and add only one or two files at a time to show you the git workflow.</p>
+<p>Now, you can go ahead and fill your new directory up with whatever files you want. For my example, I&#8217;ll keep it simple and add only one or two files at a time to show you the Git workflow.</p>
 </div>
 <div class="paragraph">
 <p>If you have some files you want to work with, great, or let&#8217;s start with some more command line practice and learn about the <code>echo</code> command.</p>
@@ -668,7 +668,7 @@ nothing to commit (create/copy files and use "git add" to track)</code></pre>
 <p>Now we&#8217;ve added the <code>&gt;&gt;</code> which redirects our output into the new file <code>sample_file01.txt</code>, which we can open in our favorite text editor. We should end up with the words "sample text" in a simple text file. That&#8217;s good enough for now.</p>
 </div>
 <div class="paragraph">
-<p>We now have an <strong>untracked file</strong> in our repository. That just means we haven&#8217;t told git to keep track of it yet. Let&#8217;s ask git about it.</p>
+<p>We now have an <strong>untracked file</strong> in our repository. That just means we haven&#8217;t told Git to keep track of it yet. Let&#8217;s ask Git about it.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -684,7 +684,7 @@ Untracked files:
 <div class="sect2">
 <h3 id="_add_a_file_to_staging">Add a file to Staging</h3>
 <div class="paragraph">
-<p>Git shows us the names of any untracked files in our repository, and it shows us how to add the file to git: with the <code>git add</code> command. Let&#8217;s try it out.</p>
+<p>Git shows us the names of any untracked files in our repository, and it shows us how to add the file to Git: with the <code>git add</code> command. Let&#8217;s try it out.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -831,7 +831,7 @@ Changes not staged for commit:
 </td>
 <td class="content">
 <div class="paragraph">
-<p>This is one of the rare times you can lose work while working in git. Git uses the <code>git checkout {FILENAME}</code> as an undo of unstaged changes, so be careful stage any changes you want to keep before using this command.</p>
+<p>This is one of the rare times you can lose work while working in Git. Git uses the <code>git checkout {FILENAME}</code> as an undo of unstaged changes, so be careful stage any changes you want to keep before using this command.</p>
 </div>
 </td>
 </tr>
@@ -872,7 +872,7 @@ git log</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>You are no longer working on a branch, so git gives you a lot of information here:</p>
+<p>You are no longer working on a branch, so Git gives you a lot of information here:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -897,10 +897,10 @@ HEAD is now at 4a214e6eba Added sample-file.txt to demonstrate committing change
 </div>
 </div>
 <div class="paragraph">
-<p>HEAD is an important concept referring to the most current commit you have checked out. Normally, HEAD is the most recent commit in your branch, but we are currently time-traveling to the past, so git calls this a 'detached HEAD'. The rest of the statement is telling us we could create a new branch from here and ignore everything after. You might want to do that some day, but we just want to find our deleted file and get back to safety.</p>
+<p>HEAD is an important concept referring to the most current commit you have checked out. Normally, HEAD is the most recent commit in your branch, but we are currently time-traveling to the past, so Git calls this a 'detached HEAD'. The rest of the statement is telling us we could create a new branch from here and ignore everything after. You might want to do that some day, but we just want to find our deleted file and get back to safety.</p>
 </div>
 <div class="paragraph">
-<p>Find the file you want to restore and copy it somewhere safe, such as your Desktop or other folder outside of the git repository. We&#8217;ll return to our branch and copy it where we want it and then commit again.</p>
+<p>Find the file you want to restore and copy it somewhere safe, such as your Desktop or other folder outside of the Git repository. We&#8217;ll return to our branch and copy it where we want it and then commit again.</p>
 </div>
 </div>
 </div>
@@ -908,7 +908,7 @@ HEAD is now at 4a214e6eba Added sample-file.txt to demonstrate committing change
 <h2 id="_files_and_folders">Files and folders</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>One thing to be aware of about working in git is that it only tracks files and doesn&#8217;t really understand folders. It keeps your folder structure, so feel free to organize your repository in a way that makes sense to you, but know that you can&#8217;t commit an empty folder.</p>
+<p>One thing to be aware of about working in Git is that it only tracks files and doesn&#8217;t really understand folders. It keeps your folder structure, so feel free to organize your repository in a way that makes sense to you, but know that you can&#8217;t commit an empty folder.</p>
 </div>
 <div class="paragraph">
 <p>For example, if you have your files arranged like this example:</p>
@@ -951,7 +951,7 @@ HEAD is now at 4a214e6eba Added sample-file.txt to demonstrate committing change
 <h2 id="_next_steps">Next Steps</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Now you have enough commands to use git on your own to track your own work and feel safe that you can experiment without overwriting your previous work. The real benefits of git come from sharing changes with others, so we&#8217;ll look at using git collaboratively.</p>
+<p>Now you have enough commands to use Git on your own to track your own work and feel safe that you can experiment without overwriting your previous work. The real benefits of Git come from sharing changes with others, so we&#8217;ll look at using Git collaboratively.</p>
 </div>
 </div>
 </div>
@@ -984,7 +984,7 @@ git diff</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-07-03 11:20:39 -0700
+Last updated 2025-07-03 11:54:15 -0700
 </div>
 </div>
 </body>
