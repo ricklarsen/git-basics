@@ -1,4 +1,5 @@
 = Versioning
+:toc: left
 
 Git is a version control system. It gives you a record of the history of your files and the changes you make to them. You can store just about any type of file in git, but we'll see that it is particulary good at working with files that are written in plain text.
 
